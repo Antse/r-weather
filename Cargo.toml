@@ -16,3 +16,5 @@ structopt = "0.3.20"
 
 [profile.release]
 lto = true
+panic = 'abort'
+opt-level = 'z'
