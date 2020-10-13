@@ -3,6 +3,7 @@ use structopt::StructOpt;
 use reqwest::Error;
 use serde::Deserialize;
 
+// take all input arguments
 #[derive(StructOpt, Debug)]
 #[structopt(name = "request")]
 struct Opt {
@@ -45,7 +46,8 @@ async fn main() -> Result<(), Error> {
 
     println!(
         "City -> {}\nWeather -> {}",
-        w.ville, w.weather[0].description
+        w.ville, 
+        w.weather[0].description
     );
     Ok(())
 }
